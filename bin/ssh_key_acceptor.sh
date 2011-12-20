@@ -1,5 +1,7 @@
 #!/bin/bash
 
+CDPATH=""
+
 echo ""
 echo "=== RadarGun ==="
 echo " This script is to be used on environments where slave nodes are provisioned via PXE boot"
