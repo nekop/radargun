@@ -1,5 +1,7 @@
 #!/bin/bash
 
+CDPATH=""
+
 ### Test for root
 if [ "$UID" -ne "0" ]
 then
