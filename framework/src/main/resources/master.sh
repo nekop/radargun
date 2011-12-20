@@ -6,7 +6,7 @@ CDPATH=""
 if [ "x$RADARGUN_HOME" = "x" ]; then DIRNAME=`dirname $0`; RADARGUN_HOME=`cd $DIRNAME/..; pwd` ; fi; export RADARGUN_HOME
 . ${RADARGUN_HOME}/bin/includes.sh
 
-CONFIG=./conf/benchmark.xml
+CONFIG=${RADARGUN_HOME}/conf/benchmark.xml
 SLAVE_COUNT_ARG=""
 TAILF=false
 RADARGUN_MASTER_PID=""
