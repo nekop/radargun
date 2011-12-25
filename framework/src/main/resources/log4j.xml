@@ -20,7 +20,7 @@
 
    <!-- Here goes the root -->
    <root>
-      <priority value="DEBUG"/>
+      <priority value="INFO"/>
       <appender-ref ref="FILE"/>
    </root>
 
