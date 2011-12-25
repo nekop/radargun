@@ -2,8 +2,7 @@
 
    <benchmark>
       <Warmup operationCount="100000"/>
-      <!-- In local mode we need at least 100M reqs to get consistent results -->
-      <PutGet numberOfRequests="200000000" opsCountStatusLog="10000" numOfThreads="100" sysMonitorEnabled="true"/>
+      <PutGet numberOfRequests="400000000" opsCountStatusLog="1000000" numOfThreads="100" sysMonitorEnabled="true" />
    </benchmark>
 
    <products>
@@ -11,7 +10,30 @@
          <config name="local/repeatable-read.xml" cache=""/>
          <config name="local/read-committed.xml" cache=""/>
       </infinispan51>
+      <infinispan50>
+         <config name="local/repeatable-read.xml" cache=""/>
+         <config name="local/read-committed.xml" cache=""/>
+      </infinispan50>
+      <infinispan4>
+         <config name="local/repeatable-read.xml" cache=""/>
+         <config name="local/read-committed.xml" cache=""/>
+      </infinispan4>
 <!--
+      <jbosscache3>
+         <config name="mvcc/mvcc-local-RR.xml" cache=""/>
+         <config name="mvcc/mvcc-local-RC.xml" cache=""/>
+      </jbosscache3>
+-->
+      <ehcache25>
+         <config name="local.xml" cache="test"/>
+      </ehcache25>
+
+<!-- Configuration Example
+      <infinispan51>
+         <config name="local/repeatable-read.xml" cache=""/>
+         <config name="local/read-committed.xml" cache=""/>
+         <config name="local/no-tx.xml" cache=""/>
+      </infinispan51>
       <infinispan50>
          <config name="local/repeatable-read.xml" cache=""/>
          <config name="local/read-committed.xml" cache=""/>
