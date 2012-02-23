@@ -2,22 +2,10 @@
 
    <benchmark>
       <Warmup operationCount="100000"/>
-      <PutGet numberOfRequests="400000000" opsCountStatusLog="1000000" numOfThreads="100" sysMonitorEnabled="true" />
+      <PutGet numberOfRequests="4000000" opsCountStatusLog="1000000" numOfThreads="100" sysMonitorEnabled="true" />
    </benchmark>
 
    <products>
-      <infinispan51>
-         <config name="local/repeatable-read.xml" cache=""/>
-         <config name="local/read-committed.xml" cache=""/>
-      </infinispan51>
-      <infinispan50>
-         <config name="local/repeatable-read.xml" cache=""/>
-         <config name="local/read-committed.xml" cache=""/>
-      </infinispan50>
-      <infinispan4>
-         <config name="local/repeatable-read.xml" cache=""/>
-         <config name="local/read-committed.xml" cache=""/>
-      </infinispan4>
 <!--
       <jbosscache3>
          <config name="mvcc/mvcc-local-RR.xml" cache=""/>
@@ -27,6 +15,18 @@
       <ehcache25>
          <config name="local.xml" cache="test"/>
       </ehcache25>
+      <infinispan4>
+         <config name="local/repeatable-read.xml" cache=""/>
+         <config name="local/read-committed.xml" cache=""/>
+      </infinispan4>
+      <infinispan50>
+         <config name="local/repeatable-read.xml" cache=""/>
+         <config name="local/read-committed.xml" cache=""/>
+      </infinispan50>
+      <infinispan51>
+         <config name="local/repeatable-read.xml" cache=""/>
+         <config name="local/read-committed.xml" cache=""/>
+      </infinispan51>
 
 <!-- Configuration Example
       <infinispan51>
